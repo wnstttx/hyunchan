@@ -1,0 +1,571 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #050505;
+   color: white;
+   font-family: Arial, sans-serif;
+}
+
+
+/* HEADER */
+
+header {
+   height: 90px;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   padding: 0 8%;
+
+   background-color: black;
+   border-bottom: 1px solid #8b0000;
+
+   position: relative;
+   z-index: 1000;
+}
+
+header h1 {
+   color: #d00000;
+   font-size: 32px;
+   letter-spacing: 1.5px;
+}
+
+
+/* НАВИГАЦИЯ */
+
+nav {
+   display: flex;
+   align-items: center;
+   gap: 25px;
+}
+
+nav a {
+   color: white;
+   text-decoration: none;
+
+   font-size: 14px;
+   letter-spacing: 3px;
+}
+
+nav a:hover {
+   color: #d00000;
+}
+
+
+/* ИКОНКИ */
+
+.icon-link {
+   font-size: 27px;
+   color: white;
+
+   text-decoration: none;
+   line-height: 1;
+
+   cursor: pointer;
+
+   transition: 0.3s;
+}
+
+.icon-link:hover {
+   color: #d00000;
+}
+
+
+/* ВЫПАДАЮЩЕЕ МЕНЮ */
+
+.menu {
+   position: relative;
+}
+
+
+/* Убираем стандартную стрелку */
+
+.menu summary {
+   list-style: none;
+}
+
+.menu summary::-webkit-details-marker {
+   display: none;
+}
+
+
+/* Окно меню */
+
+.menu-list {
+   position: absolute;
+
+   top: 45px;
+   right: 0;
+
+   width: 200px;
+
+   display: flex;
+   flex-direction: column;
+
+   background-color: #080808;
+
+   border: 1px solid #8b0000;
+
+   box-shadow:
+      0 0 15px #400000,
+      0 0 30px #200000;
+
+   z-index: 2000;
+}
+
+
+/* Ссылки внутри меню */
+
+.menu-list a {
+   display: block;
+
+   padding: 18px 20px;
+
+   color: white;
+
+   font-size: 13px;
+   letter-spacing: 3px;
+
+   text-decoration: none;
+
+   border-bottom: 1px solid #250000;
+
+   transition: 0.3s;
+}
+
+.menu-list a:last-child {
+   border-bottom: none;
+}
+
+.menu-list a:hover {
+   color: #d00000;
+   background-color: #170000;
+
+   padding-left: 27px;
+}
+
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+.hero {
+   min-height: 650px;
+
+   display: flex;
+   flex-direction: column;
+
+   align-items: center;
+   justify-content: flex-start;
+
+   gap: 20px;
+
+   padding: 45px 10% 60px;
+
+   text-align: center;
+
+   background:
+      linear-gradient(
+         90deg,
+         #000000,
+         #180000,
+         #000000
+      );
+}
+
+.hero-text {
+   width: 100%;
+   text-align: center;
+}
+
+.hero-text h2 {
+   font-size: 90px;
+   color: rgba(255, 0, 0, 0.83);
+
+   letter-spacing: 1.5px;
+
+   margin: 0 0 20px;
+}
+
+.hero img {
+   display: block;
+
+   width: 545px;
+   max-width: 90%;
+   max-height: 650px;
+
+   height: auto;
+
+   object-fit: contain;
+
+   margin: 0 auto;
+
+   filter:
+      drop-shadow(0 0 15px #800000)
+      drop-shadow(0 0 40px #300000);
+}
+
+
+/* ESCAPE И RED LIGHTS */
+
+.section {
+   min-height: 600px;
+
+   display: flex;
+
+   justify-content: center;
+   align-items: center;
+
+   gap: 100px;
+
+   padding: 80px 10%;
+
+   border-top: 1px solid #250000;
+}
+
+
+/* Фото секций */
+
+.section img {
+   width: 500px;
+
+   max-width: 100%;
+
+   height: auto;
+
+   object-fit: contain;
+
+   border: 1px solid #8b0000;
+
+   box-shadow:
+      15px 15px 0 #400000;
+}
+
+
+/* Заголовки */
+
+.section h2 {
+   color: #c90000;
+
+   font-size: 65px;
+
+   letter-spacing: 8px;
+
+   margin: 15px 0 30px;
+}
+
+
+/* Текст */
+
+.section p {
+   line-height: 2;
+
+   letter-spacing: 4px;
+
+   color: #eeeeee;
+}
+
+
+/* RED LIGHTS */
+
+.reverse {
+   background:
+      linear-gradient(
+         120deg,
+         black 50%,
+         #170000
+      );
+}
+
+/* ABOUT */
+
+.about {
+   min-height: 650px;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   padding: 50px 10% 80px;
+
+   background:
+      linear-gradient(
+         180deg,
+         #000000,
+         #170000
+      );
+}
+
+.about img {
+   display: block;
+
+   width: 650px;
+   max-width: 100%;
+   height: auto;
+
+   object-fit: contain;
+
+   margin-bottom: 45px;
+
+   border: 1px solid #8b0000;
+
+   box-shadow:
+      15px 15px 0 #400000;
+}
+
+.about-text {
+   width: 650px;
+   max-width: 100%;
+
+   text-align: left;
+}
+
+.about-text h2 {
+   color: #d00000;
+
+   font-size: 48px;
+   letter-spacing: 4px;
+
+   margin-bottom: 25px;
+}
+
+.about-text p {
+   color: #eeeeee;
+
+   font-size: 16px;
+   line-height: 1.8;
+
+   margin-bottom: 18px;
+}
+
+
+/* ABOUT ДЛЯ ТЕЛЕФОНА */
+
+@media (max-width: 800px) {
+
+   .about {
+      flex-direction: column;
+
+      text-align: center;
+
+      gap: 40px;
+
+      padding: 60px 8%;
+   }
+
+   .about img {
+      width: 90%;
+      max-width: 450px;
+   }
+
+   .about-text h2 {
+      font-size: 38px;
+   }
+}
+
+/* MORE */
+
+.gallery {
+   min-height: 650px;
+
+   padding: 100px 8%;
+
+   text-align: center;
+
+   background:
+      linear-gradient(
+         180deg,
+         #090000,
+         #000000
+      );
+}
+
+.gallery h2 {
+   color: #d00000;
+
+   font-size: 55px;
+
+   letter-spacing: 15px;
+
+   margin-bottom: 60px;
+}
+
+
+/* Контейнер фотографий */
+
+.photos {
+   display: flex;
+
+   justify-content: center;
+   align-items: center;
+
+   gap: 25px;
+
+   flex-wrap: wrap;
+}
+
+
+/* Фотографии */
+
+.photos img {
+   width: 280px;
+   height: 400px;
+
+   object-fit: cover;
+
+   filter: grayscale(40%);
+
+   transition: 0.3s;
+}
+
+
+/* Наведение на фото */
+
+.photos img:hover {
+   filter: grayscale(0%);
+
+   transform: scale(1.04);
+
+   box-shadow:
+      0 0 25px #8b0000;
+}
+
+
+/* FOOTER */
+
+footer {
+   padding: 40px;
+
+   text-align: center;
+
+   background-color: black;
+
+   border-top: 1px solid #8b0000;
+
+   color: #777;
+
+   letter-spacing: 1.5px;
+}
+
+
+/* ДЛЯ ТЕЛЕФОНА */
+
+@media (max-width: 800px) {
+
+   header {
+      height: 80px;
+
+      padding: 0 25px;
+
+      flex-direction: row;
+
+      justify-content: space-between;
+   }
+
+
+   header h1 {
+      font-size: 27px;
+   }
+
+
+   nav {
+      gap: 18px;
+   }
+
+
+   .hero {
+      min-height: 600px;
+
+      padding: 50px 5%;
+   }
+
+
+   .hero-text h2 {
+      font-size: 55px;
+   }
+
+
+   .hero img {
+      width: 80%;
+   }
+
+
+   .section {
+      flex-direction: column;
+
+      text-align: center;
+
+      gap: 40px;
+
+      padding: 70px 8%;
+   }
+
+
+   .section h2 {
+      font-size: 45px;
+
+      letter-spacing: 5px;
+   }
+
+
+   .section img {
+      width: 90%;
+   }
+
+
+   .reverse {
+      flex-direction: column-reverse;
+   }
+
+
+   .gallery {
+      padding: 70px 5%;
+   }
+
+
+   .gallery h2 {
+      font-size: 35px;
+
+      letter-spacing: 8px;
+   }
+
+
+   .photos {
+      gap: 20px;
+   }
+
+
+   .photos img {
+      width: 90%;
+      max-width: 320px;
+
+      height: auto;
+   }
+
+
+   /* Меню на телефоне */
+
+   .menu-list {
+      top: 40px;
+      right: 0;
+
+      width: 180px;
+   }
+
+
+   .menu-list a {
+      padding: 16px;
+
+      font-size: 12px;
+   }
+}
+
+
+  
